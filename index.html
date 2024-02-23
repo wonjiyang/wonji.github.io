@@ -29,6 +29,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
         <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -90,20 +91,20 @@
                 </div>
             </section>
             <section class="section section-2" data-anchor="secondPage">
-                <div class="aboutview" data-aos="fade-in" data-aos-once="true">
+                <div class="aboutview">
                     <h3 class="blind">About Me</h2>
                     <div class="aboutview-container">
                         <div class="aboutview-img">
-                            <div class="profileimg" data-aos="fade-in" data-aos-once="true">
+                            <div class="profileimg">
                                 <img class="aboutview-profileimg" src="/dist/images/profile.png" alt="양원지프로필이미지" />
                             </div>
                         </div>
                         <div class="aboutview-text">
-                            <h3 class="aboutview-title" data-aos="fade-in" data-aos-once="true">
+                            <h3 class="aboutview-title">
                                 <span>BE</span>
                                 FLEXIBLE.
                             </h3>
-                            <p class="aboutview-desc" data-aos="fade-in" data-aos-once="true">안녕하세요, 웹 UI 개발자 박예림입니다. <br>
+                            <p class="aboutview-desc">안녕하세요, 웹 UI 개발자 양원지입니다. <br>
                                 흥미로운 것은 오래 기억됩니다. 저는 사람들의 기억에 남는 웹을 만드는 것이 목표입니다. <br>
                                 CSS와 Javascript를 이용해 모션을 주고 동적인 화면을 구사하는 것에 관심이 많으며, <br>
                                 협업과 유지보수에 좋은 코드를 짜기 위해 꾸준히 공부하고 있습니다. <br>
@@ -112,7 +113,7 @@
                                 웹 개발은 혼자 하는 일이 아닌 만큼 사람들 간의 약속, 그리고 소통이 중요하다고 생각합니다. <br>
                                 유연한 소통을 할 수 있도록, 항상 경청하고 열린 자세로 임하며 성장해 나가는 flexible한 사람이 되겠습니다.
                             </p>
-                            <div class="aboutview-buttonwrap" data-aos="fade-in" data-aos-once="true">
+                            <div class="aboutview-buttonwrap">
                                 <a href="#" class="aboutview-button">이력 보기</a>
                             </div>
                         </div>
@@ -123,7 +124,13 @@
                 <div class="techview">
                     <h2 class="blind">Tech Stack</h2>
                     <div class="techview-container">
-                        <div class="techview-img-wrap"></div>
+                        <div class="techview-img-wrap">
+                            <div class="techview-img-container">
+                                <span>
+                                    <img class="deskimg" src="/dist/images/desk-593327_1280.jpg" alt="">
+                                </span>
+                            </div>
+                        </div>
                         <div class="techview-text-wrap">
                             <h3 class="techview-title">
                                 <span class="techview-word word1">T</span>
@@ -271,39 +278,39 @@
         </main>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-                  AOS.init();
+            AOS.init();
 
-console.clear();
+            console.clear();
 
-new fullpage("#fullpage", {
-  //options here
-  autoScrolling: true,
-  scrollHorizontally: true,
-  navigation: true,
-  scrollingSpeed: 700,
-  controlArrows: false,
-  anchors: ["firstPage", "secondPage", "thirdPage"],
-  keyboardScrolling: true,
-  // navigationPosition: "left",
-  showActiveTooltip: false,
-  slidesNavigation: true,
-  dropEffect: true,
-  responsiveWidth: 1025,
+            new fullpage("#fullpage", {
+            //options here
+            autoScrolling: true,
+            scrollHorizontally: true,
+            navigation: true,
+            scrollingSpeed: 700,
+            controlArrows: false,
+            anchors: ["firstPage", "secondPage", "thirdPage"],
+            keyboardScrolling: true,
+            // navigationPosition: "left",
+            showActiveTooltip: false,
+            slidesNavigation: true,
+            dropEffect: true,
+            responsiveWidth: 1025,
 
-  onLeave: function () {
-    jQuery(".section [data-aos]").removeClass("aos-animate");
-  },
-  afterLoad: function () {
-    jQuery(".section.active [data-aos]").addClass("aos-animate");
-    //jQuery('.fp-table.active .aos-init').addClass('aos-animate');
-  },
-});
-document.addEventListener("DOMContentLoaded", () => {
-        new window["Cursor"]({
-          count: 2,
-          targets: ["a"],
-        });
-      });
+            onLeave: function () {
+                jQuery(".section [data-aos]").removeClass("aos-animate");
+            },
+            afterLoad: function () {
+                jQuery(".section .active [data-aos]").addClass("aos-animate");
+                //jQuery('.fp-table.active .aos-init').addClass('aos-animate');
+            },
+            });
+            document.addEventListener("DOMContentLoaded", () => {
+                    new window["Cursor"]({
+                    count: 2,
+                    targets: ["a"],
+                    });
+                });
 
         </script>
     </body>

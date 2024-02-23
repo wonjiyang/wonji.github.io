@@ -4,6 +4,7 @@ $(document).ready(function () {
         // scrollHorizontally: true,
         navigation: true,
         showActiveTooltip: true,
+        scrollOverflow: true,
         anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage", "sixthPage", "sevenPage", "eightPage"],
         afterLoad: function (anchorLink, index) {
             if (index == 1) {

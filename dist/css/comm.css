@@ -428,6 +428,8 @@ body {
   }
 }
 .section-1 .mainveiw-scrolldown {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -435,7 +437,6 @@ body {
   left: 50%;
   bottom: 40px;
   transform: translateX(-50%);
-  transition: opacity 0.3s ease 1s;
   gap: 12px;
 }
 .section-1 .mainveiw-icon {
@@ -538,6 +539,8 @@ body {
   overflow: hidden;
   border-radius: 5px;
   flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.3s;
 }
 .section-2 .profileimg {
   width: 100%;
@@ -553,28 +556,31 @@ body {
   width: 100%;
 }
 .section-2 .aboutview-title {
+  opacity: 0;
+  transition: font-size 0.3s ease 0s, margin 0.3s ease 0s, opacity 0.3s ease 0s;
   margin: 0;
   font-size: 48px;
-  transition: font-size 0.3s ease 0s, margin 0.3s ease 0s, opacity 0.3s ease 0.8s;
 }
 .section-2 .aboutview-title span {
   font-weight: 300;
 }
 .section-2 .aboutview-desc {
+  opacity: 0;
+  transition: font-size 0.3s ease 0s, opacity 0.3s ease 0s;
   font-family: "pretendard";
   font-size: 18px;
   line-height: 1.8;
-  font-weight: 600;
+  font-weight: 500;
   color: rgb(204, 204, 204);
   margin-top: 24px;
   margin-bottom: 0;
   word-break: keep-all;
-  transition: font-size 0.3s ease 0s, opacity 0.3s ease 1.4s;
 }
 .section-2 .aboutview-buttonwrap {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
   display: flex;
   margin-top: 48px;
-  transition: opacity 0.3s ease 2s;
 }
 .section-2 .aboutview-button {
   font-family: "pretendard";
@@ -639,6 +645,25 @@ body {
     font-size: 15px;
   }
 }
+.section.active .mainveiw-scrolldown {
+  opacity: 1;
+  transition: opacity 0.3s ease 1s;
+}
+.section.active .aboutview-img {
+  opacity: 1;
+}
+.section.active .aboutview-title {
+  opacity: 1;
+  transition: font-size 0.3s ease 0s, margin 0.3s ease 0s, opacity 0.3s ease 0.8s;
+}
+.section.active .aboutview-desc {
+  opacity: 1;
+  transition: font-size 0.3s ease 0s, opacity 0.3s ease 1.4s;
+}
+.section.active .aboutview-buttonwrap {
+  opacity: 1;
+  transition: opacity 0.3s ease 2s;
+}
 .section.active .inner .slide-cover .hana {
   animation: ImgAni 9s ease-in-out infinite;
 }
@@ -656,11 +681,23 @@ body {
     background-position: bottom;
   }
 }
+.section.active .slide-wrap {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.5s;
+}
 .section.active .slide-wrap::before {
   transform: translateX(0);
 }
 .section.active .slide-wrap .screen {
   background-position: bottom;
+}
+.section.active .techview-container {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.5s;
+}
+.section.active .workview-text {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.5s;
 }
 
 .section-3 {
@@ -673,13 +710,37 @@ body {
   scrollbar-width: none;
 }
 .section-3 .techview-container {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
   padding-top: 100px;
   padding-bottom: 72px;
   position: relative;
   z-index: 1;
   width: 1200px;
   margin: 0px auto;
-  transition: opacity 0.3s ease 0.5s;
+}
+.section-3 .techview-img-wrap {
+  width: 100%;
+  margin-top: 28px;
+  position: relative;
+  filter: contrast(0.5) grayscale(1) brightness(0.55);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.section-3 .techview-img-container {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+.section-3 .deskimg {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: translate(0, -280px);
 }
 .section-3 .techview-text-wrap {
   transform: translateY(-50%);
@@ -838,6 +899,8 @@ body {
   }
 }
 .slide-wrap {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
   position: relative;
   width: 1200px;
   height: 50vh;
@@ -951,6 +1014,7 @@ body {
 }
 
 .section-4 .workview-text {
+  opacity: 0;
   width: 1200px;
   margin: 0 auto;
 }
