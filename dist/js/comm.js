@@ -1,10 +1,11 @@
 $(document).ready(function () {
     $("#fullPage").fullpage({
         // autoScrolling: true,
-        // scrollHorizontally: true,
+        scrollHorizontally: true,
+        responsiveWidth: 1024,
         navigation: true,
         showActiveTooltip: true,
-        scrollOverflow: true,
+        scrollOverflow: false,
         anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage", "sixthPage", "sevenPage", "eightPage"],
         afterLoad: function (anchorLink, index) {
             if (index == 1) {
@@ -71,6 +72,5 @@ $(document).ready(function () {
         menu.classList.toggle('add');
         menuList.classList.toggle('show');
     });
+    
 });
-          
-

@@ -6,7 +6,7 @@
 }
 
 body {
-  background: rgb(29, 29, 29);
+  background-color: rgb(34, 34, 34);
   font-family: "Poppins", "Montserrat", sans-serif;
   font-weight: 500;
   cursor: none !important;
@@ -31,8 +31,16 @@ body {
 }
 #fullPage {
   width: 100%;
+  position: relative;
+  scrollbar-width: none;
 }
 
+@media screen and (max-width: 1024px) {
+  #fullPage .section {
+    height: 100% !important;
+    max-height: 100%;
+  }
+}
 #fp-nav.right {
   left: 17px;
 }
@@ -220,6 +228,9 @@ body {
     padding: 0;
     margin: 0;
   }
+}
+.section-1 {
+  position: relative;
 }
 .section-1 .home-wrap {
   display: flex;
@@ -520,7 +531,8 @@ body {
 }
 
 .section-2 {
-  background: rgb(29, 29, 29);
+  position: relative;
+  background-color: rgb(34, 34, 34);
 }
 .section-2 .aboutview {
   max-height: 100vh;
@@ -600,17 +612,23 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .section-2 .aboutview-container {
+    width: 100%;
+    padding: 0 60px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1024px) {
   .section-2 {
     padding-bottom: 72px;
   }
   .section-2 .aboutview {
     width: 100%;
+    max-height: 100%;
   }
   .section-2 .aboutview-container {
-    width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 60px;
   }
   .section-2 .aboutview-buttonwrap {
     flex-direction: column;
@@ -638,8 +656,15 @@ body {
   .section-2 .aboutview-container {
     padding: 0 24px;
   }
+  .section-2 .aboutview-img {
+    opacity: 1;
+  }
   .section-2 .aboutview-desc {
+    opacity: 1;
     font-size: 14px;
+  }
+  .section-2 .aboutview-buttonwrap {
+    opacity: 1;
   }
   .section-2 .aboutview-button {
     font-size: 15px;
@@ -701,6 +726,8 @@ body {
 }
 
 .section-3 {
+  position: relative;
+  background: rgb(29, 29, 29);
   transition: opacity 0.3s ease 0s;
 }
 .section-3 .techview {
@@ -876,6 +903,11 @@ body {
     font-size: 24px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .section-3 .techview {
+    max-height: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
   .section-3 .techview-list-item {
     font-size: 16px;
@@ -886,6 +918,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .section-3 .techview-container {
+    opacity: 1;
     padding: 0 24px;
   }
   .section-3 .techview-list-category-name {
@@ -908,7 +941,8 @@ body {
   overflow: hidden;
 }
 .slide-wrap .ver2 {
-  margin-top: 56px;
+  margin-top: 100px;
+  height: auto;
 }
 
 .inner {
@@ -952,6 +986,7 @@ body {
 }
 .inner .slide-cover .bike {
   width: 100%;
+  border-radius: 10px;
 }
 .inner .slide-cover .bike::before {
   content: "";
@@ -967,6 +1002,9 @@ body {
   justify-content: space-between;
   height: 80%;
   font-family: "Pretendard";
+}
+.inner .descver2 {
+  height: inherit;
 }
 .inner .workview-list-title {
   font-size: 34px;
@@ -1013,6 +1051,9 @@ body {
   transition: width 0.3s ease 0s, background 0.3s ease 0s, color 0.3s ease 0s;
 }
 
+.section-4 {
+  position: relative;
+}
 .section-4 .workview-text {
   opacity: 0;
   width: 1200px;
@@ -1026,7 +1067,7 @@ body {
 }
 .section-4 .workview-word {
   position: relative;
-  animation: 3s ease 0s infinite normal none running titleWordAni;
+  animation: 1.8s ease 0s infinite normal none running titleWordAni;
 }
 @keyframes titleWordAni {
   0% {
@@ -1093,20 +1134,20 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .section-4 .workview-title {
-    font-size: 32px;
-  }
-  .section-4 .workview-list-title {
-    font-size: 28px;
-  }
-  .section-4 .workview-list-category {
-    font-size: 18px;
-  }
-  .section-4 .workview-button {
-    width: 100%;
-  }
   .inner {
     height: calc(100vh - 370px);
+  }
+  .inner .workview-title {
+    font-size: 32px;
+  }
+  .inner .workview-list-category {
+    font-size: 18px;
+  }
+  .inner .workview-list-title {
+    font-size: 28px;
+  }
+  .inner .workview-button {
+    width: 100%;
   }
 }
 @media screen and (max-width: 610px) {
@@ -1116,9 +1157,11 @@ body {
 }
 @media screen and (max-width: 480px) {
   .slide-wrap {
+    opacity: 1;
     padding: 0 24px;
   }
   .section-4 .workview-text {
+    opacity: 1;
     padding: 0 24px;
   }
   .inner {
@@ -1137,6 +1180,11 @@ body {
     font-size: 15px;
   }
 }
+.section-5 {
+  position: relative;
+  background: rgb(29, 29, 29);
+}
+
 #mouse-pointer {
   position: absolute;
   width: 20px;
