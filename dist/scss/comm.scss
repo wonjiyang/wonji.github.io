@@ -705,6 +705,9 @@ body {
         .aboutview-img {
             opacity: 1;
         }
+        .aboutview-title {
+            opacity: 1;
+        }
         .aboutview-desc {
             opacity: 1;
             font-size: 14px;
@@ -1003,9 +1006,14 @@ body {
 
 @media screen and (max-width:480px) {
     .section-3 {
+        .techview {
+            &::after {
+                opacity: 1;
+            }
+        }
         .techview-container {
             opacity: 1;
-            padding: 0 24px;
+            padding: 300px 24px 0 24px;
         }
         .techview-list-category-name {
             font-size: 21px;
@@ -1231,9 +1239,6 @@ body {
     }
     .inner {
         height: calc(100vh - 370px);
-        .workview-title {
-            font-size: 32px;
-        }
         .workview-list-category {
             font-size: 18px;
         }
@@ -1242,6 +1247,11 @@ body {
         }
         .workview-button {
             width: 100%;
+        }
+    }
+    .section-4 {
+        .workview-title {
+            font-size: 32px;
         }
     }
 }
