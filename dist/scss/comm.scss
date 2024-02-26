@@ -264,7 +264,7 @@ body {
         justify-content: center;
         align-items: center;
         position: fixed;
-        top: 50%;
+        top: inherit;
         left: 50%;
         background: linear-gradient(to bottom, #303030, #000000);
 
@@ -771,6 +771,12 @@ body {
             background-position: bottom;
         }
     }
+    .techview {
+        &::after {
+            opacity: 1;
+            transition: opacity 0.3s ease 0.3s;
+        }
+    }
     .techview-container {
         opacity: 1;
         transition: opacity 0.3s ease 0.5s;
@@ -806,22 +812,15 @@ body {
         margin-top: 28px;
         position: relative;
         filter: contrast(0.5) grayscale(1) brightness(0.55);
-        border-radius: 0.4rem;
         overflow: hidden;
     }
     .techview-img-container {
+        width: 100%;
         position: relative;
-        width: 1200px;
-        height: 300px;
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
     }
     .deskimg {
         width: 100%;
-        object-fit: contain;
-        transform: translate(0, -280px);
+        border-radius: 5px;
     }
     .techview-text-wrap {
         transform: translateY(-50%);
@@ -951,13 +950,6 @@ body {
         .techview-container {
             width: 100%;
             padding: 0 60px;
-            margin-top: 300px;
-        }
-        .techview-title {
-            font-size: 32px;
-        }
-        .techview-list-category-name {
-            font-size: 24px;
         }
     }
 }
@@ -971,6 +963,35 @@ body {
 
 @media screen and (max-width:768px) {
     .section-3 {
+        .techview {
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-image: url(/dist/images/desk-593327_1280.jpg);
+                background-repeat: no-repeat;
+                filter: contrast(0.5) grayscale(1) brightness(0.55);
+                background-position: center top;
+                opacity: 0;
+                transition: opacity 0.3s ease 0s;
+            }
+        }
+        .techview-container {
+            padding-top: 160px;
+        }
+        .techview-img-wrap {
+            display: none;
+        }
+        .techview-title {
+            font-size: 32px;
+        }
+        .techview-list-category-name {
+            font-size: 24px;
+        }
         .techview-list-item {
             font-size: 16px;
         }
@@ -1006,7 +1027,6 @@ body {
     width: 1200px;
     height: 50vh;
     margin: 0 auto;
-    overflow: hidden;
     .ver2 {
         margin-top: 100px;
         height: auto;
@@ -1186,11 +1206,10 @@ body {
 
 @media screen and (max-width:1024px) {
     .slide {
-        padding-top: 72px;
+        padding-top: 170px;
     }
     .slide-wrap {
         height: inherit;
-        margin: 0;
     }
     .inner {
         height: calc(100vh - 260px);
@@ -1207,6 +1226,9 @@ body {
 }
 
 @media screen and (max-width:768px) {
+    .slide {
+        padding-top: 250px;
+    }
     .inner {
         height: calc(100vh - 370px);
         .workview-title {
