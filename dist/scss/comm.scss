@@ -1087,7 +1087,7 @@ body {
               height: 0;
               padding-top: 100%;
             }
-          }
+        }
     }
     .slide-desc {
         display: flex;
@@ -1293,6 +1293,32 @@ body {
 .section-5 {
     position: relative;
     background: rgb(29, 29, 29);
+}
+
+.section-7 {
+    background: rgba(0, 0, 0, 0.24);
+    .footerview-container {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 240px;
+        padding: 32px 0px;
+        margin: 0px auto;
+        text-align: center;
+        font-family: "pretendard";
+    }
+    .footerview-desc {
+        color: rgb(204, 204, 204);
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+    }
+    .footerview-copy {
+        margin-top: 16px;
+        font-size: 12px;
+        color: rgb(102, 102, 102);
+    }
 }
 
 //마우스커서

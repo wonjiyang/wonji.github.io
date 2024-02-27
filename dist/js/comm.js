@@ -6,7 +6,7 @@ $(document).ready(function () {
         navigation: true,
         showActiveTooltip: true,
         scrollOverflow: false,
-        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage", "sixthPage", "sevenPage", "eightPage"],
+        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage", "sixthPage"],
         afterLoad: function (anchorLink, index) {
             if (index == 1) {
                 $(".home-wrap").css({
@@ -73,4 +73,11 @@ $(document).ready(function () {
         menuList.classList.toggle('show');
     });
     
+//     $(window).scroll(function(){
+//         if($('body').hasClass('fp-viewing-sevenPage')){
+//             $('#fp-nav').css('display','none')
+//         } else {
+//             $('#fp-nav').css('display','inline-block')
+//         }
+//     });
 });
