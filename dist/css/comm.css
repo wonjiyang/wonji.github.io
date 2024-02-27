@@ -36,6 +36,9 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+  #fullPage {
+    overflow: hidden;
+  }
   #fullPage .section {
     height: 100% !important;
     max-height: 100%;
@@ -1158,7 +1161,7 @@ body {
     padding-top: 250px;
   }
   .inner {
-    height: calc(100vh - 370px);
+    height: calc(100vh - 320px);
   }
   .inner .workview-list-category {
     font-size: 18px;
@@ -1175,7 +1178,7 @@ body {
 }
 @media screen and (max-width: 610px) {
   .inner {
-    height: calc(100vh - 420px);
+    height: calc(100vh - 400px);
   }
 }
 @media screen and (max-width: 480px) {
@@ -1188,7 +1191,7 @@ body {
     padding: 0 24px;
   }
   .inner {
-    height: calc(100vh - 490px);
+    height: calc(100vh - 430px);
   }
   .inner .workview-list-title {
     font-size: 21px;

@@ -1,11 +1,9 @@
 $(document).ready(function () {
     $("#fullPage").fullpage({
-        // autoScrolling: true,
         scrollHorizontally: true,
         responsiveWidth: 1024,
         navigation: true,
         showActiveTooltip: true,
-        scrollOverflow: false,
         anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage", "sixthPage"],
         afterLoad: function (anchorLink, index) {
             if (index == 1) {
