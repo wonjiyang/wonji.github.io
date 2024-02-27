@@ -69,7 +69,7 @@ body {
     background: $w;
 }
 #fp-nav ul li a.active span {
-    background: url(/dist/images/nav_active.png) no-repeat 50% 50%;
+    background: url(../images/nav_active.png) no-repeat 50% 50%;
     background-color: rgb(248, 255, 107, 0.25);
     height: 16px;
     width: 16px;
@@ -1076,7 +1076,7 @@ body {
             max-height: 80%;
         }
         .hana {
-            background-image: url(../../dist/images/slide1.png);
+            background-image: url(../images/slide1.png);
         }
         .bike {
             width: 100%;

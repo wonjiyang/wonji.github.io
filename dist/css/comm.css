@@ -54,7 +54,7 @@ body {
 }
 
 #fp-nav ul li a.active span {
-  background: url(/dist/images/nav_active.png) no-repeat 50% 50%;
+  background: url(../images/nav_active.png) no-repeat 50% 50%;
   background-color: rgba(248, 255, 107, 0.25);
   height: 16px;
   width: 16px;
@@ -1006,7 +1006,7 @@ body {
   max-height: 80%;
 }
 .inner .slide-cover .hana {
-  background-image: url(../../dist/images/slide1.png);
+  background-image: url(../images/slide1.png);
 }
 .inner .slide-cover .bike {
   width: 100%;
