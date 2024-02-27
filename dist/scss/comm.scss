@@ -1351,6 +1351,13 @@ body {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    #mouse-pointer {
+        display: none;
+    }
+}
+
 @media (max-width: 428px) {
     :root {
         font-size: 12px;
