@@ -712,6 +712,23 @@ body {
     background-position: bottom;
   }
 }
+.section.active .inner .slide-cover3 .react {
+  animation: ImgAni 4s ease-in-out infinite;
+}
+@keyframes ImgAni {
+  0%, 100% {
+    background-position: top;
+  }
+  20% {
+    background-position: top;
+  }
+  50% {
+    background-position: bottom;
+  }
+  70% {
+    background-position: bottom;
+  }
+}
 .section.active .slide-wrap {
   opacity: 1;
   transition: opacity 0.3s ease 0.5s;
@@ -965,21 +982,24 @@ body {
   margin: 0 auto;
 }
 .slide-wrap .ver2 {
-  margin-top: 100px;
+  margin-top: 95px;
   height: auto;
+}
+.slide-wrap .ver3 {
+  margin-top: 95px;
 }
 
 .inner {
   display: flex;
   align-items: flex-start;
   gap: 56px;
-  height: 100%;
+  height: 85%;
   margin-top: 24px;
 }
 .inner .slide-cover {
   position: relative;
-  width: 60%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -994,7 +1014,17 @@ body {
   min-height: 100%;
   max-height: 100%;
 }
-.inner .slide-cover .slide-img2 {
+.inner .slide-cover .hana {
+  background-image: url(../images/slide1.png);
+}
+.inner .slide-cover2 {
+  position: relative;
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.inner .slide-cover2 .slide-img2 {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1005,26 +1035,44 @@ body {
   min-height: 80%;
   max-height: 80%;
 }
-.inner .slide-cover .hana {
-  background-image: url(../images/slide1.png);
-}
-.inner .slide-cover .bike {
+.inner .slide-cover2 .bike {
   width: 100%;
   border-radius: 10px;
 }
-.inner .slide-cover .bike::before {
+.inner .slide-cover2 .bike::before {
   content: "";
   display: block;
   width: 100%;
   height: 0;
   padding-top: 100%;
 }
+.inner .slide-cover3 {
+  position: relative;
+  width: 71%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.inner .slide-cover3 .slide-img3 {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+.inner .slide-cover3 .react {
+  background-image: url(../images/slide3.png);
+}
 .inner .slide-desc {
   display: flex;
   flex-direction: column;
   align-self: stretch;
   justify-content: space-between;
-  height: 80%;
+  height: 100%;
   font-family: "Pretendard";
 }
 .inner .descver2 {
@@ -1135,6 +1183,9 @@ body {
     width: 100%;
     padding: 0 60px;
   }
+  .inner {
+    height: 75%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .slide {
@@ -1149,6 +1200,9 @@ body {
   .inner .slide-cover {
     width: 100%;
     height: 450px;
+  }
+  .inner .slide-cover2 {
+    width: 100%;
   }
   .inner .slide-desc {
     height: 200px;

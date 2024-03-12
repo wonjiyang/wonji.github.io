@@ -117,6 +117,24 @@
     background-position: bottom;
   }
 }
+.detailview-img-container .react {
+  background-image: url(../images/slide3.png);
+  animation: ImgAni 4s ease-in-out infinite;
+}
+@keyframes ImgAni {
+  0%, 100% {
+    background-position: top;
+  }
+  20% {
+    background-position: top;
+  }
+  50% {
+    background-position: bottom;
+  }
+  70% {
+    background-position: bottom;
+  }
+}
 .detailview-img-container .detailview-img {
   background-position: 0 0;
   background-repeat: no-repeat;
